@@ -1,0 +1,80 @@
+
+
+.type{
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem
+}
+
+body {
+  background-color: yellow; /* Set the background color to yellow */
+  overflow-x: hidden;
+}
+
+.title{
+  display: flex;
+  font-family: fam;
+  font-size: 2rem;
+  line-height: 2rem;
+  display: inline-block
+}
+
+.body{
+  margin-top: 2rem;
+  font-family: fam;
+  font-size: 2rem;
+  font-size:1rem;
+  text-align: justify;
+}
+
+nav {
+  color: black; /* Text color for the navigation links */
+  padding: 10px; /* Padding around navigation links */
+  font-family: fam;
+  padding-bottom: 2rem;
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center the content horizontally */
+}
+
+nav ul {
+  list-style-type: none; /* Remove bullet points from the list */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+nav ul li {
+  display: inline; /* Display list items inline */
+  margin-right: 10px; /* Add margin between list items */
+}
+
+nav ul li a {
+  color: black; /* Text color for navigation links */
+  text-decoration: none; /* Remove default underline */
+}
+
+.clickable {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+@font-face {
+  font-family: 'fam';
+  src: url('famgrotesk.woff') format('woff'), url('famgrotesk.woff') format('woff');
+}
+
+
+
+
+
+

@@ -10,6 +10,7 @@
         color: black; /* Text color for the navigation links */
         padding: 10px; /* Padding around navigation links */
         font-family: fam;
+        padding-bottom: 2rem;
     }
     
     nav ul {
@@ -24,7 +25,7 @@
     }
     
     nav ul li a {
-        color: #fff; /* Text color for navigation links */
+        color: black; /* Text color for navigation links */
         text-decoration: none; /* Remove default underline */
     }
 
@@ -59,7 +60,8 @@
         justify-content: space-between;
         align-items: center;
         padding: 10px;
-        border-bottom: 1.5px solid #000000;
+       
+        border-top: 1.5px solid #000000;
     }
 
     .grid-item img {
@@ -109,21 +111,36 @@
     }
 
     #preloader {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #ffffff; /* Set background color */
-        z-index: 9999; /* Ensure it's above other elements */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff; /* Set background color */
+    z-index: 9999; /* Ensure it's above other elements */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Align text vertically */
+    background-color: yellow;
+}
 
+#preloader p {
+    font-size: 2rem; /* Adjust font size */
+    color: black; /* Text color */
+    margin: 4rem;
+    font-family: fam;
+}
+
+
+    #image-cycle {
+       max-width: 100%;
+    }
+    
     #image-cycle img {
-        max-width: 100px; /* Set max-width for the images */
-        animation: fade 5s infinite; /* Adjust animation duration */
+        width: 40%;
+        margin: auto;
+      
     }
 
     @keyframes fade {
@@ -150,8 +167,13 @@
 </header>
     <div id="preloader">
         <div id="image-cycle">
-            <img src="glass.jpg" alt="Loading Image 1">
-            <img src="image2.jpg" alt="Loading Image 2">
+            <img src="glass.png" alt="Loading Image 1">
+            <img src="leaf.jpg" alt="Loading Image 2">
+            <img src="pin.png" alt="Loading Image 2">
+            <img src="cup.png" alt="Loading Image 2">
+            <img src="cutlery.JPG" alt="Loading Image 2">
+
+            
             <!-- Add more images as needed -->
         </div>
     </div>
@@ -403,8 +425,8 @@
 </div>
 
 <script>
-    // Add event listener to all images with class "expandable-image"
-    document.querySelectorAll('.expandable-image').forEach(function(image) {
+        // Add event listener to all images with class "expandable-image"
+        document.querySelectorAll('.expandable-image').forEach(function(image) {
         // Store the original image source
         image.dataset.originalSrc = image.src;
         // Store the original caption text
@@ -436,20 +458,53 @@
             }, 10); // Adjust delay time as needed
         });
     });
-    // Wait for the window to load before hiding the preloader
-window.addEventListener('load', function() {
-    // Hide the preloader after 5 seconds
+
+
+var slideIndex = 0;
+var totalSlides = document.querySelectorAll('#image-cycle img').length;
+
+carousel();
+
+function carousel() {
+    var i;
+    var slides = document.querySelectorAll('#image-cycle img');
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+        showBlankScreen(); // Show blank yellow screen after image cycle
+    }    
+    slides[slideIndex-1].style.display = 'block';  
+    if (slideIndex <= slides.length) {
+        setTimeout(carousel, 100); // Change image every 2 seconds
+    }
+}
+
+function showBlankScreen() {
+    // Hide the preloader after the image cycle ends
     setTimeout(function() {
-        document.getElementById('preloader').style.display = 'none';
-        document.getElementById('content').style.display = 'block'; // Show the main content
-    }, 5000); // Adjust the duration (in milliseconds) as needed
+        document.getElementById('preloader').style.opacity = '0';
+        // Show the main content after the preloader fades out
+        setTimeout(function() {
+            document.getElementById('preloader').style.display = 'none';
+      
+        }, 100); // Adjust timing to match the transition duration
+    }, 8000); // Adjust the delay before fading as needed
+}
+
+window.addEventListener('load', function() {
+    // Hide the preloader after the image cycle ends
+    setTimeout(function() {
+        document.getElementById('preloader').style.opacity = '0';
+        // Show the main content after the preloader fades out
+        setTimeout(function() {
+            document.getElementById('preloader').style.display = 'none';
+     
+        }, 6000); // Adjust timing to match the transition duration
+    }, 8000); // Adjust the duration of the image cycle as needed
 });
-
-
-
-
-
-  
 
   
 </script>
