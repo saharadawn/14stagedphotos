@@ -1,0 +1,101 @@
+
+.title{
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+  font-family: fam;
+  font-size: 3rem;
+  line-height: 2.8rem;
+  display: inline-block
+
+}
+
+
+
+.clickable {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+body{
+background-color: yellow;
+overflow-x: hidden;
+}
+
+main {
+width: 100vw;
+
+}
+
+.grid-item {
+grid-column: span 1;
+padding-bottom: 100%;
+position: relative;
+width: 25vw; /* Adjust the width of each grid item to occupy 20% of the container width */
+height: 10vh;
+
+}
+
+.grid-item img { 
+width: 100%; /* Make the image fill the entire grid item */
+height: 100%; /* Make the image fill the entire grid item */
+object-fit: cover; /* Maintain aspect ratio while covering the entire grid item */
+position: absolute;
+}
+
+
+
+.text {
+font-family: 'xanhmono';
+line-height: 6rem;
+color: red;
+text-align: center;
+padding-top: 1rem;
+padding-bottom: 2rem;
+font-size: 7rem;
+position: relative; /* Ensure text appears above the video */
+z-index: 1; /* Ensure text is in front of the video */
+}
+
+header img{
+width: 2rem;
+gap: 2rem;
+
+}
+
+@font-face {
+  font-family: 'fam';
+  src: url('famgrotesk.woff') format('woff'), url('famgrotesk.woff') format('woff');
+}
+
+
+
+
+
+
+
+  #image-container {
+    width: 100%; /* Adjust as needed */
+    height: 100%; /* Adjust as needed */
+    overflow: hidden;
+    align-content: center;
+
+  }
+
+  #image-container img {
+    width: 50%;
+    height: auto;
+    display: none;
+  }
+
+
+
+
+

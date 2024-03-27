@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Grid Example</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background-color: yellow;
+    }
+
+    .caption{
+        color: black;
+
+    }
+
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .grid-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #000000;
+    }
+
+    .grid-item img {
+        max-width: 10%;
+        height: auto;
+        align-self: flex-end;
+    }
+
+    .caption {
+        margin: 0;
+        text-align: left;
+        flex-grow: 1;
+        font-family: fam;
+    }
+
+    @font-face {
+  font-family: 'fam';
+  src: url('famgrotesk.woff') format('woff'), url('famgrotesk.woff') format('woff');
+}
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+    <div class="grid-item">
+        <div class="caption">
+            OBJECT 01: TIE
+            <BR>
+            JAN 10, 2024
+            <BR>
+            Telephoto Camera - 7mm f2.8
+            12 MP - 3024 x 4032 - 1.7 MB
+
+
+        </div>
+        <img src="earbuds.JPG" alt="Image 1">
+    </div>
+    <div class="grid-item">
+        <div class="caption">OBJECT: 01</div>
+        <img src="earbuds.JPG" alt="Image 1">
+    </div>
+    <div class="grid-item">
+        <div class="caption">OBJECT: 01</div>
+        <img src="earbuds.JPG" alt="Image 1">
+    </div>
+    <div class="grid-item">
+        <div class="caption">OBJECT: 01</div>
+        <img src="earbuds.JPG" alt="Image 1">
+    </div>
+    <div class="grid-item">
+        <div class="caption">OBJECT: 01</div>
+        <img src="earbuds.JPG" alt="Image 1">
+    </div>
+    <div class="grid-item">
+        <div class="caption">OBJECT: 01</div>
+        <img src="earbuds.JPG" alt="Image 1">
+    </div>
+    <div class="grid-item">
+        <div class="caption">OBJECT: 01</div>
+        <img src="earbuds.JPG" alt="Image 1">
+    </div>
+    <div class="grid-item">
+        <div class="caption">OBJECT: 01</div>
+        <img src="earbuds.JPG" alt="Image 1">
+    </div>
+    <div class="grid-item">
+        <div class="caption">OBJECT: 01</div>
+        <img src="earbuds.JPG" alt="Image 1">
+    </div>
+    <div class="grid-item">
+        <div class="caption">OBJECT: 01</div>
+        <img src="earbuds.JPG" alt="Image 1">
+    </div>
+    <div class="grid-item">
+        <div class="caption">OBJECT: 01</div>
+        <img src="earbuds.JPG" alt="Image 1">
+    </div>
+    <div class="grid-item">
+        <div class="caption">OBJECT: 01</div>
+        <img src="earbuds.JPG" alt="Image 1">
+    </div>
+    <!-- Repeat this pattern for 19 more rows -->
+</div>
+
+</body>
+</html>

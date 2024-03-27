@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>c28c14aa-ef6d-4c5b-ba70-c39fc2d5283c.jpg</title>
+    <link rel="stylesheet" href="style.css" />
+  
+   
+</head>
+
+<header> 20 FOUND PHOTOS AND THEIR STAGED COUNTERPARTS </header>
+<body>
+    <main>
+   
+
+        <div class="flex-container">
+            <div class="flex-item grid-container">
+                <div class="grid-item" data-title="">
+                
+                    <img src="./leaf.JPG">
+                    <div class="text">hello</div>
+                    
+                </div>
+    
+                <div class="grid-item" data-title="" >
+                    <img src="./pin.png">
+                 <div class="text">hello</div>
+                </div>
+                <div class="grid-item" data-title="" >
+                    <img src="./glass.png">
+                    <div class="text">hello</div>
+
+                    </div>
+                  
+                <div class="grid-item" data-title="" >
+                    <img src="./tie.JPG" >
+                    <div class="text">hello</div>
+                </div>
+                <div class="grid-item" data-title="" >
+                    <img src="./earbuds.JPG" >
+                    <div class="text">hello</div>
+                </div>
+                <div class="grid-item" data-title="" >
+                    <img src="./cup.png" >
+                    <div class="text">hello</div>
+                </div>
+                <div class="grid-item" data-title="" >
+                    <img src="./cutlery.JPG" >
+                    <div class="text">hello</div>
+                </div>
+                <!-- other grid items with captions -->
+            </div>
+            
+                
+        </div>
+        </div>
+        </div>
+    <script>
+   document.addEventListener("DOMContentLoaded", function() {
+  const images = document.querySelectorAll(".grid-item img");
+
+  function fadeInImages() {
+    images.forEach(image => {
+      if (isElementInViewport(image) && !image.classList.contains("visible")) {
+        image.classList.add("visible");
+      }
+    });
+  }
+
+  function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  // Initial check for images in viewport
+  fadeInImages();
+
+  // Check for images in viewport on scroll
+  window.addEventListener("scroll", function() {
+    fadeInImages();
+  });
+});
+
+    </script>
+
+       
+
+    </main>
+
+
+
+
+
+
+</body>
+</html>

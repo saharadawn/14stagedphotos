@@ -1,0 +1,122 @@
+header {
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  color: yellow;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.grid-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content;
+  margin: auto;
+  scroll-snap-type: y proximity;
+  overflow-y: auto; /* Ensure the container is scrollable */
+  height: 100vh; /* Set container height to fill the viewport */
+}
+
+.text {
+  color: red;
+  font-size: 5rem;
+  line-height: 5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  opacity: 0; /* initially set text opacity to 0 */
+  transition: opacity 0.5s ease; /* smooth transition for opacity change */
+}
+  .grid-item:hover img,
+  .grid-item:hover .text {
+    opacity: 1; /* Change opacity to 1 when grid-item is hovered */
+  }
+
+
+
+body {
+  background-color: black;
+  overflow-x: hidden;
+}
+
+.main {
+  width: 100vw;
+}
+
+.grid-item {
+  grid-column: span 1;
+  position: relative;
+  justify-content: center;
+  scroll-snap-align: start;
+  height: 50%;
+}
+
+.grid-item img {
+  margin-top: 4rem;
+  width: 100%; /* Make the image fill the entire grid item */
+  max-height: 60%; /* Adjust this value to make the images smaller */
+  object-fit: contain; /* Maintain aspect ratio while covering the entire grid item */
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.visible {
+  opacity: 1;
+}
+
+@font-face {
+  font-family: 'xanhmono';
+  src: url('xanhmono.woff') format('woff'), url('xanhmono.woff') format('woff');
+}
+
+@media screen and (max-width: 767px) {
+  .grid-item:hover::after {
+    font-size: 1rem;
+    color: yellow ;
+
+  }
+  .text {
+    color: black;
+    font-size: 1rem;
+    line-height: 1rem;
+    margin-left: 11.5rem;
+    margin-right: 2rem;
+  }
+  .footer {
+    margin-top: 1.5rem;
+  }
+  .grid-container {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+  .grid-item {
+    width: 100vw;
+    height: 100vw;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    
+  }
+  .grid-item img{
+    width: 100%; /* Make the image fill the entire grid item */
+  max-height: 70%; /* Adjust this value to make the images smaller */
+  object-fit: contain; /* Maintain aspect ratio while covering the entire grid item */
+    
+    
+  }
+  body {
+    background-color: yellow;
+  }
+
+
+header {
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  text-align: justify;
+  text-justify: inter-word;
+}
+}

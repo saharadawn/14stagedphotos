@@ -1,0 +1,21 @@
+[
+    {
+      "caption": "2024-03-26.jpg",
+      "camera_type": "DSLR",
+      "date": "2024-03-26",
+      "object_type": "landscape"
+    },
+    {
+      "image_file": "leaf.jpg",
+      "camera_type": "Mirrorless",
+      "date": "2024-03-25",
+      "object_type": "portrait"
+    },
+    {
+      "image_file": "2024-03-24.jpg",
+      "camera_type": "Action Camera",
+      "date": "2024-03-24",
+      "object_type": "sports"
+    }
+  ]
+  
