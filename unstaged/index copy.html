@@ -111,7 +111,7 @@
             Telephoto Camera - 7mm f2.8
             12 MP - 3024 x 4032 - 1.7 MB
         </div>
-        <img class="expandable-image" src="earbuds.JPG" alt="Image 1" data-alternate-src="tie.jpg">
+        <img class="expandable-image" src="earbuds.JPG" alt="Image 1" data-alternate-src="tie.jpg" data-alt-caption="OBJECT 01">
     </div>
     <div class="grid-item">
         <div class="caption">
@@ -349,22 +349,43 @@
 
 <script>
     // Add event listener to all images with class "expandable-image"
-document.querySelectorAll('.expandable-image').forEach(function(image) {
-    // Store the original image source
-    image.dataset.originalSrc = image.src;
+    document.querySelectorAll('.expandable-image').forEach(function(image) {
+        // Store the original image source
+        image.dataset.originalSrc = image.src;
+        // Store the original caption text
+        image.dataset.originalCaption = image.previousElementSibling.textContent;
+        // Store the alternate caption text
+        image.dataset.altCaption = "OBJECT"; // Set your alternate caption here
 
-    image.addEventListener('click', function() {
-        // Toggle between two different images
-        var newSrc = this.dataset.originalSrc === this.src ? this.dataset.alternateSrc : this.dataset.originalSrc;
-        this.src = newSrc;
+        image.addEventListener('click', function() {
+            // Toggle between two different images
+            var newSrc = this.dataset.originalSrc === this.src ? this.dataset.alternateSrc : this.dataset.originalSrc;
+            this.src = newSrc;
 
-        // Delay the expansion to ensure the image switch happens first
-        setTimeout(() => {
-            // Toggle class "expanded" on the clicked image's parent
-            this.parentNode.classList.toggle('expanded');
-        }, 10); // Adjust delay time as needed
+            // Get the caption element associated with the clicked image
+            var caption = this.previousElementSibling;
+
+            // Delay the expansion to ensure the image switch happens first
+            setTimeout(() => {
+                // Toggle class "expanded" on the clicked image's parent
+                this.parentElement.classList.toggle('expanded');
+
+                // Toggle between original and alternate caption text
+                if (this.parentElement.classList.contains('expanded')) {
+                    // Update caption text when image is expanded
+                    caption.textContent = this.dataset.altCaption;
+                } else {
+                    // Restore original caption text when image is collapsed
+                    caption.textContent = this.dataset.originalCaption;
+                }
+            }, 10); // Adjust delay time as needed
+        });
     });
-});
+</script>
+
+
+
+  
 
   
 </script>
