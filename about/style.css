@@ -30,12 +30,13 @@ body {
 }
 
 nav {
-  color: black; /* Text color for the navigation links */
+  color: red; /* Text color for the navigation links */
   padding: 10px; /* Padding around navigation links */
   font-family: fam;
   padding-bottom: 2rem;
   display: flex; /* Use flexbox */
   justify-content: center; /* Center the content horizontally */
+  border-bottom: 2px ;
 }
 
 nav ul {
