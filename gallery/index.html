@@ -1,89 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>c28c14aa-ef6d-4c5b-ba70-c39fc2d5283c.jpg</title>
-    <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Grid</title>
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 5 columns */
+    grid-template-rows: repeat(5, 1fr); /* 3 rows */
+    gap: 3rem; /* Gap between grid items */
+    padding: 2rem;
+  }
+
+  .grid-item {
+    width: 100%; /* Adjust the width based on the number of columns */
+    overflow: hidden; /* Hide overflow content */
+    position: relative;
+    gap: 1rem;
+  }
+
+  .grid-item img {
+    width: 50%; /* Each image takes up half of the grid item width */
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    float: left; /* Float images left to align them horizontally */
+  }
+  nav {
+        color: black; /* Text color for the navigation links */
+        padding: 10px; /* Padding around navigation links */
+        font-family: fam;
+        padding-bottom: 2rem;
+    }
+    
+    nav ul {
+        list-style-type: none; /* Remove bullet points from the list */
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+    }
+    
+    nav ul li {
+        display: inline; /* Display list items inline */
+        margin-right: 10px; /* Add margin between list items */
+    }
+    
+    nav ul li a {
+        color: black; /* Text color for navigation links */
+        text-decoration: none; /* Remove default underline */
+    }
+
+    @font-face {
+      font-family: 'fam';
+      src: url('famgrotesk.woff') format('woff'), url('famgrotesk.woff') format('woff');
+    }
+    .header {
+        display: flex;
+        flex-direction: row;
+        text-align: justify;
+        align-items: center;
+        justify-content: center;
+    }
+
+    body{
+        background-color: yellow;
+    }
   
-   
+</style>
 </head>
+
+<header class="header">
+    <!-- Navigation bar -->
+    <nav>
+        <ul>
+            <li><a href="#">ARCHIVE</a></li>
+            <li><a href="https://saharadawn.github.io/20photos.github.io/about/">ABOUT</a></li>
+            <li><a href="#">GALLERY</a></li>
+        </ul>
+    </nav>
+</header>
+
 <body>
-    <main>
-   
-            <div class="grid">
-            <div class="flex-item grid-container">
-                
-            <div class="grid-item"  data-title="OBJECT 01: TIE">
-                <img src="./tie.JPG" data-alternate-src="./pudding.JPG">
-            </div>
-            <div class="grid-item"  data-title="OBJECT 02: SAFETY PIN">
-                <img src="./pin.png">
-            </div>
-            <div class="grid-item" data-type="OBJECT 13: SAFETY PIN">
-                <img src="./pinphone.JPG">
-            </div>
-            <div class="grid-item"  data-title="OBJECT 02: SAFETY PIN">
-                <img src="./flowerphone.JPG">
-            </div>
-            <div class="grid-item"  data-title="OBJECT 03: FORK & KNIFE">
-                <img src="./cutlery.JPG">
-            </div>
-            <div class="grid-item"  data-title="OBJECT 04: MONSTERA LEAF">
-                <img src="./leaf.JPG" >
-            </div>
-            <div class="grid-item"  data-title="OBJECT 04: MONSTERA LEAF">
-                <img src="./leafphone.JPG" >
-            </div>
-            <div class="grid-item" data-type="OBJECT 05: BINDER CLIPS">
-                <img src="./binder.JPG">
-            </div>
-            <div class="grid-item" data-type="OBJECT 06: $20">
-                <img src="./20.JPG" >
-            </div>
-            <div class="grid-item" data-type="OBJECT 07: WIRE EARBUDS">
-                <img src="./earbuds.JPG">
-            </div>
-            <div class="grid-item" data-type="OBJECT 07: WIRE EARBUDS">
-                <img src="./earbudsphone.JPG">
-            </div>
-            <div class="grid-item" data-type="OBJECT 08: RED GLOVE">
-                <img src="./glove.png">
-            </div>
-            <div class="grid-item" data-type="OBJECT 09: WINE GLASS">
-                <img src="./glass.png">
-            </div>
-            <div class="grid-item" data-type="OBJECT 10: CHROME COFFEE CUP">
-                <img src="./cup.png">
-            </div>
-            <div class="grid-item" data-type="OBJECT 11: BINDER CLIP">
-                <img src="./binder.JPG">
-            </div>
-            <div class="grid-item" data-type="OBJECT 12: TIE">
-                <img src="./tie.JPG">
-             </div>
-                
-                <div class="grid-item" data-type="OBJECT 13: SAFETY PIN">
-                    <img src="./pin.png">
-                </div>
-            
-                <div class="grid-item" data-type="OBJECT 14: MONSTERA LEAF">
-                    <img src="./leaf.JPG">
-                </div>
-                <div class="grid-item" data-type="OBJECT 15: FORK & KNIFE">
-                    <img src="./cutlery.JPG">
-                </div>
-                <div class="grid-item" data-type="OBJECT 16: RED GLOVE">
-                    <img src="./glove.png">
-                </div>
-            </div>
-        </div>
-        </div>
-
-    </main>
-<script type="text/javascript" src="./script.js" defer>
-
-</script>
-
+<div class="grid-container">
+  <!-- Repeat this grid item structure for each pair of images -->
+  <div class="grid-item"><img src="tie.JPG" alt="Image 1"><img src="tiephone.jpg" alt="Image 2"></div>
+  <div class="grid-item"><img src="apple.png" alt="Image 1"><img src="pinphone.JPG" alt="Image 2"></div>
+  <div class="grid-item"><img src="20.JPG" alt="Image 1"><img src="20phone.JPG" alt="Image 2"></div>
+  <div class="grid-item"><img src="earbuds.JPG" alt="Image 1"><img src="earbudsphone.JPG" alt="Image 2"></div>
+  <div class="grid-item"><img src="leaf.JPG".JPG" alt="Image 1"><img src="leafphone.JPG" alt="Image 2"></div>
+  <div class="grid-item"><img src="binder.JPG" alt="Image 1"><img src="earbudsphone.JPG" alt="Image 2"></div>
+  <div class="grid-item"><img src="cutlery.JPG" alt="Image 1"><img src="earbudsphone.JPG" alt="Image 2"></div>
+  <div class="grid-item"><img src="flower.JPG" alt="Image 1"><img src="flowerphone.JPG" alt="Image 2"></div>
+  <div class="grid-item"><img src="cup.png" alt="Image 1"><img src="earbudsphone.JPG" alt="Image 2"></div>
+  <div class="grid-item"><img src="glove.png" alt="Image 1"><img src="glovephone.JPG" alt="Image 2"></div>
+  <div class="grid-item"><img src="pear.JPG" alt="Image 1"><img src="earbudsphone.JPG" alt="Image 2"></div>
+  <div class="grid-item"><img src="pin.png" alt="Image 1"><img src="pinphone.JPG" alt="Image 2"></div>
+  <div class="grid-item"><img src="grapes.png".JPG" alt="Image 1"><img src="grapephone.JPG" alt="Image 2"></div>
+  <div class="grid-item"><img src="glass.png" alt="Image 1"><img src="glassphone.JPG" alt="Image 2"></div>
+  <div class="grid-item"><img src="necklace.png" alt="Image 1"><img src="earbudsphone.JPG" alt="Image 2"></div>
+  <!-- Repeat images 3-30 here -->
+  <!-- Adjust src attribute and alt text for each image -->
+</div>
 </body>
 </html>
