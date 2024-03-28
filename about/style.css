@@ -26,7 +26,14 @@ nav ul li a {
   padding-left: .5rem;
   padding-right: .5rem;
 }
+.header {
+  display: flex;
+  flex-direction: row;
+  text-align: justify;
+  align-items: center;
+  justify-content: center;
 
+}
 
 .type{
   position: absolute;
