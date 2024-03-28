@@ -317,6 +317,26 @@ function carousel() {
         carouselTimer = setTimeout(carousel, 100); // Change image every 2 seconds
     }
 }
+/// Toggle Button Functionality
+document.getElementById('toggleButton').addEventListener('click', function(event) {
+    event.stopPropagation(); // Prevent event propagation
+
+    // Toggle alt sources and expanded items
+    document.querySelectorAll('.expandable-image').forEach(function(image) {
+        var newSrc = image.dataset.originalSrc === image.src ? image.dataset.alternateSrc : image.dataset.originalSrc;
+        image.src = newSrc;
+
+        var caption = image.previousElementSibling;
+        if (image.parentElement.classList.contains('expanded')) {
+            caption.textContent = image.dataset.originalCaption;
+        } else {
+            caption.textContent = image.dataset.altCaption;
+        }
+
+        image.parentElement.classList.toggle('expanded');
+    });
+});
+
 // Function to handle fading out the carousel
 function fadeOutCarousel() {
     var carousel = document.getElementById('preloader');
@@ -340,7 +360,9 @@ document.addEventListener('click', fadeOutCarousel);
 // Add click event listener to stop the carousel when clicked
 document.addEventListener('click', stopCarousel);
 
-  
+
+
+
     </script>
 
 
