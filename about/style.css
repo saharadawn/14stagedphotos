@@ -1,3 +1,31 @@
+nav {
+  color: black; /* Text color for the navigation links */
+  padding: 10px; /* Padding around navigation links */
+  font-family: fam;
+  padding-bottom: 2rem;
+
+}
+
+nav ul {
+  list-style-type: none; /* Remove bullet points from the list */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+
+}
+
+nav ul li {
+  display: inline; /* Display list items inline */
+  margin-right: 10px; /* Add margin between list items */
+}
+
+nav ul li a {
+  color: black; /* Text color for navigation links */
+  text-decoration: none; /* Remove default underline */
+  border: 1.5px solid black;
+  font-size: .8rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
 
 
 .type{
@@ -28,32 +56,6 @@ body {
   font-size: 2rem;
   font-size:1rem;
   text-align: justify;
-}
-
-nav {
-  color: red; /* Text color for the navigation links */
-  padding: 10px; /* Padding around navigation links */
-  font-family: fam;
-  padding-bottom: 2rem;
-  display: flex; /* Use flexbox */
-  justify-content: center; /* Center the content horizontally */
-  border-bottom: 2px ;
-}
-
-nav ul {
-  list-style-type: none; /* Remove bullet points from the list */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-}
-
-nav ul li {
-  display: inline; /* Display list items inline */
-  margin-right: 10px; /* Add margin between list items */
-}
-
-nav ul li a {
-  color: black; /* Text color for navigation links */
-  text-decoration: none; /* Remove default underline */
 }
 
 

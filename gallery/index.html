@@ -24,30 +24,39 @@
     width: 50%; /* Each image takes up half of the grid item width */
     height: 100%;
     object-fit: cover; /* Maintain aspect ratio and cover the area */
-    float: left; /* Float images left to align them horizontally */
+    float:inline-start;
+    margin: auto;
+    align-content: center;
   }
   nav {
-        color: black; /* Text color for the navigation links */
-        padding: 10px; /* Padding around navigation links */
-        font-family: fam;
-        padding-bottom: 2rem;
-    }
-    
-    nav ul {
-        list-style-type: none; /* Remove bullet points from the list */
-        margin: 0; /* Remove default margin */
-        padding: 0; /* Remove default padding */
-    }
-    
-    nav ul li {
-        display: inline; /* Display list items inline */
-        margin-right: 10px; /* Add margin between list items */
-    }
-    
-    nav ul li a {
-        color: black; /* Text color for navigation links */
-        text-decoration: none; /* Remove default underline */
-    }
+    color: yellow; /* Text color for the navigation links */
+    padding: 10px; /* Padding around navigation links */
+    font-family: fam;
+    padding-bottom: 2rem;
+
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points from the list */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+  
+}
+
+nav ul li {
+    display: inline; /* Display list items inline */
+    margin-right: 10px; /* Add margin between list items */
+}
+
+nav ul li a {
+    color: yellow; /* Text color for navigation links */
+    text-decoration: none; /* Remove default underline */
+    border: 1.5px solid yellow;
+    font-size: .8rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
 
     @font-face {
       font-family: 'fam';
@@ -59,11 +68,99 @@
         text-align: justify;
         align-items: center;
         justify-content: center;
+ 
     }
 
     body{
-        background-color: yellow;
+        background-color: black;
     }
+
+    .button{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+    }
+    #stagedBtn{
+      color: yellow;
+  border-style: hidden;
+  background-color: black;
+  cursor: pointer;
+  padding-bottom: .2rem;
+   margin-bottom: 1rem;
+   margin-left: 1rem;
+   font-family: fam;
+   right: 0;
+    }
+
+    #stagedBtn.clicked{
+      color: black;
+  border-style: hidden;
+  background-color: yellow;
+  cursor: pointer;
+  padding-bottom: .2rem;
+   margin-bottom: 1rem;
+   margin-left: 1rem;
+   font-family: fam;
+   right: 0;
+    }
+    #foundBtn{
+      color: yellow;
+  border-style: hidden;
+  background-color: black;
+  cursor: pointer;
+  padding-bottom: .2rem;
+   margin-bottom: 1rem;
+   margin-left: 1rem;
+   font-family: fam;
+   right: 0;
+    }
+   #foundBtn.clicked{
+      color: black;
+  border-style: hidden;
+  background-color: yellow;
+  cursor: pointer;
+  padding-bottom: .2rem;
+   margin-bottom: 1rem;
+   margin-left: 1rem;
+   font-family: fam;
+   right: 0;
+    }
+      
+    
+    #bothBtn{
+      color: yellow;
+  border-style: hidden;
+  background-color: black;
+  cursor: pointer;
+  padding-bottom: .2rem;
+   margin-bottom: 1rem;
+   margin-left: 1rem;
+   font-family: fam;
+   right: 0;
+
+      
+    }
+
+    #bothBtn.clicked{
+      color: black;
+  border-style: hidden;
+  background-color: yellow;
+  cursor: pointer;
+  padding-bottom: .2rem;
+   margin-bottom: 1rem;
+   margin-left: 1rem;
+   font-family: fam;
+   right: 0;
+    }
+
+    .grid-item img[alt="Image 2"] {
+  float: right;
+}
+.grid-item img[alt="Image 1"] {
+  float: left;
+}
+    
   
 </style>
 </head>
@@ -80,6 +177,11 @@
 </header>
 
 <body>
+  <div class="button">
+    <button id="stagedBtn" class="button">staged</button>
+    <button id="bothBtn" class="button clicked">both</button>
+    <button id="foundBtn" class="button">found</button>
+  </div>
 <div class="grid-container">
   <!-- Repeat this grid item structure for each pair of images -->
   <div class="grid-item"><img src="tie.JPG" alt="Image 1"><img src="tiephone.jpg" alt="Image 2"></div>
@@ -100,5 +202,96 @@
   <!-- Repeat images 3-30 here -->
   <!-- Adjust src attribute and alt text for each image -->
 </div>
+
+<script>
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const stagedBtn = document.getElementById("stagedBtn");
+    const foundBtn = document.getElementById("foundBtn");
+    const bothBtn = document.getElementById("bothBtn");
+
+    const allImages = document.querySelectorAll(".grid-item");
+
+    stagedBtn.addEventListener("click", function() {
+      toggleImages("staged");
+    });
+
+    foundBtn.addEventListener("click", function() {
+      toggleImages("found");
+    });
+
+    bothBtn.addEventListener("click", function() {
+      toggleImages("both");
+    });
+
+    function toggleImages(type) {
+      allImages.forEach(function(item) {
+        const images = item.querySelectorAll("img");
+        if (type === "staged") {
+          images[0].style.display = "block";
+          images[1].style.display = "none";
+        } else if (type === "found") {
+          images[0].style.display = "none";
+          images[1].style.display = "block";
+        } else if (type === "both") {
+          images[0].style.display = "block";
+          images[1].style.display = "block";
+        }
+      });
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const stagedBtn = document.getElementById("stagedBtn");
+    const foundBtn = document.getElementById("foundBtn");
+    const bothBtn = document.getElementById("bothBtn");
+
+    const allImages = document.querySelectorAll(".grid-item");
+
+    stagedBtn.addEventListener("click", function() {
+      toggleImages("staged");
+      toggleButton(stagedBtn);
+    });
+
+    foundBtn.addEventListener("click", function() {
+      toggleImages("found");
+      toggleButton(foundBtn);
+    });
+
+    bothBtn.addEventListener("click", function() {
+      toggleImages("both");
+      toggleButton(bothBtn);
+    });
+
+    function toggleImages(type) {
+      allImages.forEach(function(item) {
+        const images = item.querySelectorAll("img");
+        if (type === "staged") {
+          images[0].style.display = "block";
+          images[1].style.display = "none";
+        } else if (type === "found") {
+          images[0].style.display = "none";
+          images[1].style.display = "block";
+        } else if (type === "both") {
+          images[0].style.display = "block";
+          images[1].style.display = "block";
+        }
+      });
+    }
+
+    function toggleButton(button) {
+      // Remove 'clicked' class from all buttons
+      document.querySelectorAll('.button').forEach(function(btn) {
+        btn.classList.remove('clicked');
+      });
+      // Add 'clicked' class to the clicked button
+      button.classList.add('clicked');
+    }
+  });
+
+
+
+
+</script>
 </body>
 </html>

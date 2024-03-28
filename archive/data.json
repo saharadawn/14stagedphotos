@@ -1,68 +1,96 @@
+[
+    {
+        "objectName": "OBJECT 01: TIE  | ",
+        "date": "JAN 10, 2024  | ",
+        "camera": "iPhone Camera  | ",
+        "location": "200 Water St, New York, NY "
+    },
+    {
+        "objectName": "OBJECT 02: APPLE  | ",
+        "date": "FEB 1, 2024  | ",
+        "camera": "iPhone Camera  | ",
+        "location": "200 Water St, New York, NY "
+    },
+    {
+      "objectName": "OBJECT 03: $20 | ",
+      "date": "JAN 10, 2024 | ",
+      "camera": "iPhone Camera | ",
+      "location": "200 Water St, New York, NY  "
+  },
+  {
+      "objectName": "OBJECT 04: EARBUDS | ",
+      "date": "FEB 1, 2024 | ",
+      "camera": "iPhone Camera | ",
+      "location": "200 Water St, New York, NY"
+  },
+
+  {
+    "objectName": "OBJECT 01: TIE  | ",
+    "date": "JAN 10, 2024  | ",
+    "camera": "iPhone Camera  | ",
+    "location": "200 Water St, New York, NY "
+},
 {
-    "gridItems": [
-      {
-        "object": "OBJECT 01: TIE",
-        "date": "JAN 10, 2024",
-        "description": "Telephoto Camera - 7mm f2.8 12 MP - 3024 x 4032 - 1.7 MB",
-        "imageSrc": "binder.JPG",
-        "alternateSrc": "earbuds.JPG"
-      },
-      {
-        "object": "OBJECT 02: TIE",
-        "date": "JAN 10, 2024",
-        "description": "Telephoto Camera - 7mm f2.8 12 MP - 3024 x 4032 - 1.7 MB",
-        "imageSrc": "earbuds.JPG",
-        "alternateSrc": "tie.JPG"
-      },
-      {
-        "object": "OBJECT 03: TIE",
-        "date": "JAN 10, 2024",
-        "description": "Telephoto Camera - 7mm f2.8 12 MP - 3024 x 4032 - 1.7 MB",
-        "imageSrc": "earbuds.JPG",
-        "alternateSrc": "tie.JPG"
-      },
-      {
-        "object": "OBJECT 04: TIE",
-        "date": "JAN 10, 2024",
-        "description": "Telephoto Camera - 7mm f2.8 12 MP - 3024 x 4032 - 1.7 MB",
-        "imageSrc": "earbuds.JPG",
-        "alternateSrc": "tie.JPG"
-      },
-      {
-        "object": "OBJECT 05: TIE",
-        "date": "JAN 10, 2024",
-        "description": "Telephoto Camera - 7mm f2.8 12 MP - 3024 x 4032 - 1.7 MB",
-        "imageSrc": "earbuds.JPG",
-        "alternateSrc": "tie.JPG"
-      },
-      {
-        "object": "OBJECT 06: TIE",
-        "date": "JAN 10, 2024",
-        "description": "Telephoto Camera - 7mm f2.8 12 MP - 3024 x 4032 - 1.7 MB",
-        "imageSrc": "earbuds.JPG",
-        "alternateSrc": "tie.jpg"
-      },
-      {
-        "object": "OBJECT 07: TIE",
-        "date": "JAN 10, 2024",
-        "description": "Telephoto Camera - 7mm f2.8 12 MP - 3024 x 4032 - 1.7 MB",
-        "imageSrc": "earbuds.JPG",
-        "alternateSrc": "tie.jpg"
-      },
-      {
-        "object": "OBJECT 08: TIE",
-        "date": "JAN 10, 2024",
-        "description": "1.7 MB Telephoto Camera - 7mm f2.8",
-        "imageSrc": "earbuds.JPG",
-        "alternateSrc": "tie.jpg"
-      },
-      {
-        "object": "OBJECT 01: TIE",
-        "date": "JAN 10, 2024",
-        "description": "Telephoto Camera - 7mm f2.8 12 MP - 3024 x 4032 - 1.7 MB",
-        "imageSrc": "earbuds.JPG",
-        "alternateSrc": "tie.JPG"
-      }
-    ]
+    "objectName": "OBJECT 02: APPLE  | ",
+    "date": "FEB 1, 2024  | ",
+    "camera": "iPhone Camera  | ",
+    "location": "200 Water St, New York, NY "
+},
+{
+  "objectName": "OBJECT 03: $20 | ",
+  "date": "JAN 10, 2024 | ",
+  "camera": "iPhone Camera | ",
+  "location": "200 Water St, New York, NY  "
+},
+{
+  "objectName": "OBJECT 04: EARBUDS | ",
+  "date": "FEB 1, 2024 | ",
+  "camera": "iPhone Camera | ",
+  "location": "200 Water St, New York, NY"
+},
+{
+    "objectName": "OBJECT 04: EARBUDS | ",
+    "date": "FEB 1, 2024 | ",
+    "camera": "iPhone Camera | ",
+    "location": "200 Water St, New York, NY"
+  },
+  {
+    "objectName": "OBJECT 04: EARBUDS | ",
+    "date": "FEB 1, 2024 | ",
+    "camera": "iPhone Camera | ",
+    "location": "200 Water St, New York, NY"
+  },
+  {
+    "objectName": "OBJECT 04: EARBUDS | ",
+    "date": "FEB 1, 2024 | ",
+    "camera": "iPhone Camera | ",
+    "location": "200 Water St, New York, NY"
+  },
+  {
+    "objectName": "OBJECT 04: EARBUDS | ",
+    "date": "FEB 1, 2024 | ",
+    "camera": "iPhone Camera | ",
+    "location": "200 Water St, New York, NY"
+  },
+  {
+    "objectName": "OBJECT 04: EARBUDS | ",
+    "date": "FEB 1, 2024 | ",
+    "camera": "iPhone Camera | ",
+    "location": "200 Water St, New York, NY"
+  },
+  {
+    "objectName": "OBJECT 04: EARBUDS | ",
+    "date": "FEB 1, 2024 | ",
+    "camera": "iPhone Camera | ",
+    "location": "200 Water St, New York, NY"
+  },
+  {
+    "objectName": "OBJECT 04: EARBUDS | ",
+    "date": "FEB 1, 2024 | ",
+    "camera": "iPhone Camera | ",
+    "location": "200 Water St, New York, NY"
   }
+]
+  
+
   

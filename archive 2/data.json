@@ -1,0 +1,27 @@
+[
+  {
+      "objectName": "OBJECT 01: TIE",
+      "date": "JAN 10, 2024",
+      "camera": "iPhone Camera",
+      "location": "200 Water St, New York, NY",
+      "altCaption": "— TIE"
+  },
+  {
+      "objectName": "OBJECT 02: APPLE",
+      "date": "FEB 1, 2024",
+      "camera": "iPhone Camera",
+      "location": "200 Water St, New York, NY"
+  },
+  {
+    "objectName": "OBJECT 03: $20 | ",
+    "date": "JAN 10, 2024 | ",
+    "camera": "iPhone Camera | ",
+    "location": "200 Water St, New York, NY | "
+},
+{
+    "objectName": "OBJECT 04: EARBUDS",
+    "date": "FEB 1, 2024",
+    "camera": "iPhone Camera",
+    "location": "200 Water St, New York, NY"
+}
+]
